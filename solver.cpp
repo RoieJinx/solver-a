@@ -17,10 +17,10 @@ complex<double> solver::solve(ComplexVariable &x)
 
 
 //RealVariable class
-//Default constructor
+//constructor
 RealVariable::RealVariable():number(0){}
 
-//Parameters constructor
+//constructor
 RealVariable::RealVariable(double number):number(number){}
 
 //==
@@ -143,7 +143,7 @@ RealVariable& solver::operator/(RealVariable& y, const double x)
 //complex
 ComplexVariable::ComplexVariable():realnumber(0),imagenumber(0){}
 
-//Parameters constructor
+// constructor
 ComplexVariable::ComplexVariable(double realnumber,double imagenumber):realnumber(realnumber),imagenumber(imagenumber){}
 //==
 ComplexVariable& solver::operator==(ComplexVariable& y, const double x)
