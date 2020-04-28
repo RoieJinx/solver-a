@@ -17,11 +17,7 @@ complex<double> solver::solve(ComplexVariable &x)
 
 
 //RealVariable class
-//constructor
-RealVariable::RealVariable():number(0){}
 
-//constructor
-RealVariable::RealVariable(double number):number(number){}
 
 //==
 RealVariable& solver::operator==(RealVariable& y, int x)
@@ -29,7 +25,7 @@ RealVariable& solver::operator==(RealVariable& y, int x)
     return y;
 }
 
-RealVariable& solver::operator==(RealVariable& y, const double x)
+RealVariable& solver::operator==(RealVariable& y,  double x)
 {
     return y;
 }
@@ -39,7 +35,7 @@ RealVariable& solver::operator==(int x, RealVariable& y)
     return y;
 }
 
-RealVariable& solver::operator==(const double x, RealVariable& y)
+RealVariable& solver::operator==( double x, RealVariable& y)
 {
     return y;
 }
@@ -55,7 +51,7 @@ RealVariable& solver::operator+(int x, RealVariable& y)
     return y;
 }
 
-RealVariable& solver::operator+(const double x, RealVariable& y)
+RealVariable& solver::operator+( double x, RealVariable& y)
 {
     return y;
 }
@@ -65,7 +61,7 @@ RealVariable& solver::operator+(RealVariable& x, RealVariable& y)
     return y;
 }
 
-RealVariable& solver::operator+(RealVariable& y, const double x)
+RealVariable& solver::operator+(RealVariable& y,  double x)
 {
     return y;
 }
@@ -81,7 +77,7 @@ RealVariable& solver::operator-(RealVariable& y, int x)
     return y;
 }
 
-RealVariable& solver::operator-(RealVariable& y, const double x)
+RealVariable& solver::operator-(RealVariable& y,  double x)
 {
     return y;
 }
@@ -101,7 +97,7 @@ RealVariable& solver::operator-(int x,RealVariable& y)
     return y;
 }
 
-RealVariable& solver::operator-(const double x,RealVariable& y)
+RealVariable& solver::operator-( double x,RealVariable& y)
 {
     return y;
 }
@@ -112,7 +108,7 @@ RealVariable& solver::operator*(int x, RealVariable& y)
    return y; 
 }
 
-RealVariable& solver::operator*(const double x, RealVariable& y)
+RealVariable& solver::operator*( double x, RealVariable& y)
 {
    return y; 
 }
@@ -122,7 +118,7 @@ RealVariable& solver::operator*(RealVariable& y, int x)
    return y; 
 }
 
-RealVariable& solver::operator*(RealVariable& y,const double x)
+RealVariable& solver::operator*(RealVariable& y, double x)
 {
    return y; 
 }
@@ -134,19 +130,16 @@ RealVariable& solver::operator^(RealVariable& y, int x)
 }
 
 // /
-RealVariable& solver::operator/(RealVariable& y, const double x)
+RealVariable& solver::operator/(RealVariable& y,  double x)
 {
     return y;
 }
 
 
 //complex
-ComplexVariable::ComplexVariable():realnumber(0),imagenumber(0){}
 
-// constructor
-ComplexVariable::ComplexVariable(double realnumber,double imagenumber):realnumber(realnumber),imagenumber(imagenumber){}
 //==
-ComplexVariable& solver::operator==(ComplexVariable& y, const double x)
+ComplexVariable& solver::operator==(ComplexVariable& y,  double x)
 {
     return y;
 }
@@ -161,7 +154,7 @@ ComplexVariable& solver::operator==(int x, ComplexVariable& y)
     return y;
 }
 
-ComplexVariable& solver::operator==(const double x, ComplexVariable& y)
+ComplexVariable& solver::operator==( double x, ComplexVariable& y)
 {
     return y;
 }
@@ -177,7 +170,7 @@ ComplexVariable& solver::operator+(int x, ComplexVariable& y)
     return y;
 }
 
-ComplexVariable& solver::operator+(const double x, ComplexVariable& y)
+ComplexVariable& solver::operator+( double x, ComplexVariable& y)
 {
     return y;
 }
@@ -187,7 +180,7 @@ ComplexVariable& solver::operator+(ComplexVariable& x, ComplexVariable& y)
     return y;
 }
 
-ComplexVariable& solver::operator+(ComplexVariable& y, const double x)
+ComplexVariable& solver::operator+(ComplexVariable& y,  double x)
 {
     return y;
 }
@@ -213,12 +206,12 @@ ComplexVariable& solver::operator-(int x, ComplexVariable& y)
     return y;
 }
 
-ComplexVariable& solver::operator-(const double x, ComplexVariable& y)
+ComplexVariable& solver::operator-( double x, ComplexVariable& y)
 {
     return y;
 }
 
-ComplexVariable& solver::operator-(ComplexVariable& y, const double x)
+ComplexVariable& solver::operator-(ComplexVariable& y,  double x)
 {
     return y;
 }
@@ -263,7 +256,7 @@ ComplexVariable& solver::operator^(ComplexVariable& y, int x)
 }
 
 // /
-ComplexVariable& solver::operator/(ComplexVariable& y, const double x)
+ComplexVariable& solver::operator/(ComplexVariable& y,  double x)
 {
     return y;
 }

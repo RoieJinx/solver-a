@@ -11,14 +11,10 @@ namespace solver
     class RealVariable
     {
          private:
-         double number; 
+         double num; 
 
         public:
-                 //constructor
-                 RealVariable();
-
-                //constructor for number
-                 RealVariable(double number);
+                 
 
                  //define varibales we may nedd
                  int power = 1; //as we did in opp
@@ -34,38 +30,38 @@ namespace solver
 
                 // ==
                 friend RealVariable& operator==(RealVariable& y, int x);//define: x=int
-                friend RealVariable& operator==(RealVariable& y, const double x);//define: x=double
+                friend RealVariable& operator==(RealVariable& y,  double x);//define: x=double
                 friend RealVariable& operator==(int x, RealVariable& y);//define: int=x
-                friend RealVariable& operator==(const double x, RealVariable& y);//define: double=x
+                friend RealVariable& operator==( double x, RealVariable& y);//define: double=x
                 friend RealVariable& operator==(RealVariable& x, RealVariable& y);//define: x1=x2
 
                 //+
                 friend RealVariable& operator+(int x, RealVariable& y);//define: int+x
-                friend RealVariable& operator+(const double x, RealVariable& y);//define: double+x
+                friend RealVariable& operator+( double x, RealVariable& y);//define: double+x
                 friend RealVariable& operator+(RealVariable& x, RealVariable& y);//define: x1+x2
-                friend RealVariable& operator+(RealVariable& y, const double x);//define: x+double
+                friend RealVariable& operator+(RealVariable& y,  double x);//define: x+double
                 friend RealVariable& operator+(RealVariable& y, int x);//define: x+int
 
                 //-
                 friend RealVariable& operator-(RealVariable& y, int x);//define: x-int
-                friend RealVariable& operator-(RealVariable& y, const double x);//define: x-double
+                friend RealVariable& operator-(RealVariable& y,  double x);//define: x-double
                 friend RealVariable& operator-(RealVariable& x, RealVariable& y);//define: x1-x2
                 friend RealVariable& operator-(RealVariable& y);//define: x
                 friend RealVariable& operator-(int x,RealVariable& y);//define: int-x
-                friend RealVariable& operator-(const double x,RealVariable& y);//define: double-x
+                friend RealVariable& operator-( double x,RealVariable& y);//define: double-x
                 
 
                 //*
                 friend RealVariable& operator*(int x, RealVariable& y); //define: int*x
-                friend RealVariable& operator*(const double x, RealVariable& y);//define: dobule*x
+                friend RealVariable& operator*( double x, RealVariable& y);//define: dobule*x
                 friend RealVariable& operator*(RealVariable& y, int x);//define: x*int
-                friend RealVariable& operator*(RealVariable& y, const double x);//define: x*double
+                friend RealVariable& operator*(RealVariable& y,  double x);//define: x*double
                 
                 //^
                 friend RealVariable& operator^(RealVariable& y, int x);//define: x^int
 
                 // /
-                friend RealVariable& operator/(RealVariable& y, const double x);////define: x/double
+                friend RealVariable& operator/(RealVariable& y,  double x);////define: x/double
 
     };
 
@@ -74,14 +70,10 @@ namespace solver
     class ComplexVariable 
     {
         private:
-        double realnumber,imagenumber;
+        double realNum,imaginaryNum;
 
         public:
-        //constructor
-        ComplexVariable();
-
-        //real and imagine constructor
-        ComplexVariable(double realnumber,double imagenumber);
+        
 
         //define varibales we may nedd
         complex <int> power = 1; //as we did in opp
@@ -97,24 +89,24 @@ namespace solver
 
         //==
         friend ComplexVariable& operator==(ComplexVariable& y, int x);//define: x=int
-        friend ComplexVariable& operator==(ComplexVariable& y, const double x);//define: x=double
+        friend ComplexVariable& operator==(ComplexVariable& y,  double x);//define: x=double
         friend ComplexVariable& operator==(ComplexVariable& x, ComplexVariable& y);//define: x1=x2
         friend ComplexVariable& operator==(int x, ComplexVariable& y);//define: int=x
-        friend ComplexVariable& operator==(const double x, ComplexVariable& y);//define: double=x
+        friend ComplexVariable& operator==( double x, ComplexVariable& y);//define: double=x
 
         //+
         friend ComplexVariable& operator+(int x, ComplexVariable& y);//define: int+x
-        friend ComplexVariable& operator+(const double x, ComplexVariable& y);//define: double+x
+        friend ComplexVariable& operator+( double x, ComplexVariable& y);//define: double+x
         friend ComplexVariable& operator+(ComplexVariable& x, ComplexVariable& y);//define: x1+x2
-        friend ComplexVariable& operator+(ComplexVariable& y, const double x);//define: x+double
+        friend ComplexVariable& operator+(ComplexVariable& y,  double x);//define: x+double
         friend ComplexVariable& operator+(ComplexVariable& y, int x);//define: x+int
         friend ComplexVariable& operator+(ComplexVariable& x, complex<double> y);//define: x+x(double)
 
         //-
         friend ComplexVariable& operator-(ComplexVariable& y, int x);//define: x-int
         friend ComplexVariable& operator-(int x, ComplexVariable& y);//define: int-x
-        friend ComplexVariable& operator-(const double x, ComplexVariable& y);//define: double-x
-        friend ComplexVariable& operator-(ComplexVariable& y, const double x);//define: x-double
+        friend ComplexVariable& operator-( double x, ComplexVariable& y);//define: double-x
+        friend ComplexVariable& operator-(ComplexVariable& y,  double x);//define: x-double
         friend ComplexVariable& operator-(ComplexVariable& x, ComplexVariable& y);//define: x1-x2
         friend ComplexVariable& operator-(ComplexVariable& y);//define: x
         friend ComplexVariable &operator-(complex<double> x, ComplexVariable &y);//define: x(double)-x
@@ -128,7 +120,7 @@ namespace solver
 
 
         // /
-        friend ComplexVariable& operator/(ComplexVariable& y, const double x);//define: x/double
+        friend ComplexVariable& operator/(ComplexVariable& y,  double x);//define: x/double
 
         //^
         friend ComplexVariable& operator^(ComplexVariable& y, int x);//define: x^int
